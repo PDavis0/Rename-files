@@ -1,0 +1,23 @@
+import os 
+  
+# Function to rename multiple files 
+def main(): 
+    i = 1
+    list = os.listdir(r"C:\XYZ\XYZ\XYZ") #entire path (don't end with \ )
+    for filename in list: 
+        dst =str(i) + ".jpg" #type .jpg
+        src = filename 
+        dst = dst 
+        
+        #file doesn't already exist & don't delete this file
+        #takeout 2nd condition if no desire to keep it
+        if(dst not in list or dst != "renameFiles.py"):
+            os.rename(src, dst) 
+        i += 1
+
+  
+# Driver Code 
+if __name__ == '__main__': 
+      
+    # Calling main() function 
+    main() 
